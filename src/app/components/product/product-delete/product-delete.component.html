@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Deletar Produto</mat-card-title>
+        <mat-card-subtitle>O produto será deletado permanentemente</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <form>
+            <mat-form-field>
+                <input matInput [value]="product.name" disabled>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [value]="product.price" disabled>
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button (click)="deleteProduct()" color="warn">
+            DELETAR!
+        </button>
+        <button mat-raised-button (click)="cancel()">
+            Cancelar
+        </button>
+    </mat-card-actions>
+</mat-card>
